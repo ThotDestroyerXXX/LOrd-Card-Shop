@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet" msprop:Generator_DataSetName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transactions" msprop:Generator_RowEvHandlerName="transactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="transactionsRowDeleted" msprop:Generator_RowDeletingName="transactionsRowDeleting" msprop:Generator_RowEvArgName="transactionsRowChangeEvent" msprop:Generator_TablePropName="transactions" msprop:Generator_RowChangedName="transactionsRowChanged" msprop:Generator_RowChangingName="transactionsRowChanging" msprop:Generator_TableClassName="transactionsDataTable" msprop:Generator_RowClassName="transactionsRow" msprop:Generator_TableVarName="tabletransactions" msprop:Generator_UserTableName="transactions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="transaction_id" msprop:Generator_ColumnPropNameInRow="transaction_id" msprop:Generator_ColumnPropNameInTable="transaction_idColumn" msprop:Generator_ColumnVarNameInTable="columntransaction_id" msprop:Generator_UserColumnName="transaction_id" type="xs:string" minOccurs="0" />
+              <xs:element name="transaction_date" msprop:Generator_ColumnPropNameInRow="transaction_date" msprop:Generator_ColumnPropNameInTable="transaction_dateColumn" msprop:Generator_ColumnVarNameInTable="columntransaction_date" msprop:Generator_UserColumnName="transaction_date" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_id" msprop:Generator_ColumnPropNameInRow="customer_id" msprop:Generator_ColumnPropNameInTable="customer_idColumn" msprop:Generator_ColumnVarNameInTable="columncustomer_id" msprop:Generator_UserColumnName="customer_id" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
+              <xs:element name="grand_total" msprop:Generator_ColumnPropNameInRow="grand_total" msprop:Generator_ColumnPropNameInTable="grand_totalColumn" msprop:Generator_ColumnVarNameInTable="columngrand_total" msprop:Generator_UserColumnName="grand_total" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transaction_details" msprop:Generator_RowEvHandlerName="transaction_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="transaction_detailsRowDeleted" msprop:Generator_RowDeletingName="transaction_detailsRowDeleting" msprop:Generator_RowEvArgName="transaction_detailsRowChangeEvent" msprop:Generator_TablePropName="transaction_details" msprop:Generator_RowChangedName="transaction_detailsRowChanged" msprop:Generator_RowChangingName="transaction_detailsRowChanging" msprop:Generator_TableClassName="transaction_detailsDataTable" msprop:Generator_RowClassName="transaction_detailsRow" msprop:Generator_TableVarName="tabletransaction_details" msprop:Generator_UserTableName="transaction_details">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="transaction_id" msprop:Generator_ColumnPropNameInRow="transaction_id" msprop:Generator_ColumnPropNameInTable="transaction_idColumn" msprop:Generator_ColumnVarNameInTable="columntransaction_id" msprop:Generator_UserColumnName="transaction_id" type="xs:string" minOccurs="0" />
+              <xs:element name="card_id" msprop:Generator_ColumnPropNameInRow="card_id" msprop:Generator_ColumnPropNameInTable="card_idColumn" msprop:Generator_ColumnVarNameInTable="columncard_id" msprop:Generator_UserColumnName="card_id" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_UserColumnName="quantity" type="xs:string" minOccurs="0" />
+              <xs:element name="sub_total" msprop:Generator_ColumnPropNameInRow="sub_total" msprop:Generator_ColumnPropNameInTable="sub_totalColumn" msprop:Generator_ColumnVarNameInTable="columnsub_total" msprop:Generator_UserColumnName="sub_total" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="transactions_transaction_details" msdata:parent="transactions" msdata:child="transaction_details" msdata:parentkey="transaction_id" msdata:childkey="transaction_id" msprop:Generator_UserParentTable="transactions" msprop:Generator_UserChildTable="transaction_details" msprop:Generator_RelationVarName="relationtransactions_transaction_details" msprop:Generator_ChildPropName="Gettransaction_detailsRows" msprop:Generator_ParentPropName="transactionsRow" msprop:Generator_UserRelationName="transactions_transaction_details" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

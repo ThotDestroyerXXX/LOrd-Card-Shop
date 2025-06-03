@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a3f879b9513b4da587c2504ce08a9bce" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Card" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="DatabaseModel.Carts" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="DatabaseModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="DatabaseModel.TransactionHeader" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="DatabaseModel.Users" Width="1.5" PointX="0.75" PointY="2.25" />
+        <AssociationConnector Association="DatabaseModel.FK_Carts_Card" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionDetail_Card" />
+        <AssociationConnector Association="DatabaseModel.FK_Carts_Users" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionDetail_TransactionHeader" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionHeader_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

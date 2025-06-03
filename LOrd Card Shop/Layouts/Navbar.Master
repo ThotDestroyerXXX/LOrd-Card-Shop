@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="LOrd_Card_Shop.Layouts.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+        <div class="navbarContainer">
+            <a href="/Views/HomePage.aspx">Home</a>
+            <div id="customerLink" class="customerLink" runat="server">
+                <a href="/Views/Customers/OrderCard.aspx" id="OrderCard">Order</a>
+                <a href="/Views/Profile.aspx" id="Profile">Profile</a>
+                <a href="/Views/Customers/History.aspx" id="History">History</a>
+                <a href="/Views/Customers/Cart.aspx" id="Cart">Cart</a>
+            </div>
+            <div id="adminLink" class="adminLink" runat="server">
+                <a href="/Views/Admin/ManageCard.aspx" id="ManageCard">Manage Card</a>
+                <a href="/Views/Profile.aspx" id="Profile">Profile</a>
+                <a href="/Views/Admin/ViewTransaction.aspx" id="ViewTransaction">History</a>
+                <a href="/Views/Admin/TransactionReport.aspx" id="TransactionReport">Report</a>
+                <a href="/Views/Admin/OrderQueue.aspx" id="OrderQueue">Order Queue</a>
+            </div>
+            <div>
+                <input type="text" name="search" runat="server" id="SearchInp" />
+                <asp:Button Text="Search" runat="server" ID="SearchBtn" OnClick="SearchBtn_Click" />
+            </div>
+            <div class="NameButton">
+                <asp:Label Text=" " runat="server" ID="UserLbl" />
+                <asp:Button Text="Log Out" runat="server" ID="LogoutBtn" OnClick="LogoutBtn_Click" />
+                <a href="/Views/LoginPage.aspx" runat="server" id="Login">Login</a>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    
+</body>
+</html>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Geologica", sans-serif;
+    }
+    .navbarContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .customerLink, .adminLink {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .NameButton {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #LogoutBtn {
+        width: 5rem;
+        height: 2rem;
+        border-radius: 5px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+    }
+</style>
+
